@@ -10,7 +10,7 @@ Ensure that an S3 bucket is created with the model artefacts. The S3 bucket shou
 If you need to create the S3 bucket do so with this AWS CLI command:
 
 ```
-aws s3 mb sagemaker-$(aws configure get region)-$(aws sts get-caller-identity --query 'Account' --output text)
+aws s3 mb s3://sagemaker-$(aws configure get region)-$(aws sts get-caller-identity --query 'Account' --output text)
 ```
 
 # Step 1 - Build the Docker image for SageMaker model inference
