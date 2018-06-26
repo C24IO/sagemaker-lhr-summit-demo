@@ -18,6 +18,8 @@ aws s3 mb sagemaker-$(aws configure get region)-$(aws sts get-caller-identity --
 Run the script to build and push the Docker image to ECS Container Registry (ECR) that will be used by the SageMaker Endpoint infrastructure to run the inference code.
 
 ```
+$ cd ~/environment
+$ git clone https://github.com/mattmcclean/sagemaker-lhr-summit-demo.git
 $ cd ~/environment/sagemaker-lhr-summit-demo/container
 $ ./build_and_push.sh sagemaker-summit-demo
 ```
