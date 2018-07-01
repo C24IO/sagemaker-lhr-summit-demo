@@ -1,12 +1,15 @@
 #!/bin/bash
 
 set -e
+set -x
+set -v
 
 echo "Creating fast.ai conda enviornment"
 cat > /home/ec2-user/fastai-setup.sh << EOF
 #!/bin/bash
 cd /home/ec2-user/SageMaker/fastai
 conda env update
+conda update -n base conda
 source activate fastai
 echo "Finished creating fast.ai conda environment"
 EOF
